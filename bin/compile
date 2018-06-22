@@ -12,9 +12,9 @@ CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILDPACK_DIR="$(dirname $(dirname $0))"
 
-curl --output /tmp/calibre.tgz "https://dl.dropboxusercontent.com/s/3p5evbm16qljsc4/calibre.tgz?dl=0"
+curl --output /tmp/calibre.txz "https://download.calibre-ebook.com/3.26.1/calibre-3.26.1-x86_64.txz"
 
-tar xvf /tmp/calibre.tgz -C $BUILD_DIR
+tar xvf /tmp/calibre.txz -C $BUILD_DIR
 
 
 mkdir -p $BUILD_DIR/.profile.d
